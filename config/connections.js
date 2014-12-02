@@ -64,6 +64,10 @@ module.exports.connections = {
     // password: 'password',
     database: 'devdb'
   },
+  /*productionMongodbServer: {
+    adapter: 'sails-mongo',
+    url: mongodb://heroku_app32146417:d44u4agu5hgbljmj7uij8drj03@ds061360.mongolab.com:61360/heroku_app32146417
+  },*/
 
   /***************************************************************************
   *                                                                          *
