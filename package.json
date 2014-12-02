@@ -31,7 +31,7 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/johanbrodin/server.git"
+    "url": "https://github.com/NordicLight/server.git"
   },
   "author": "johanbrodin",
   "license": ""
