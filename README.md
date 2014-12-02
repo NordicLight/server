@@ -1,1 +1,1 @@
-Sails Server Application
+Sails Node.js Server Application
