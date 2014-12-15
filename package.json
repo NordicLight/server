@@ -5,7 +5,7 @@
   "description": "a Sails application",
   "keywords": [],
   "engines": {
-     "node": "0.10.x"
+    "node": "0.10.x"
   },
   "dependencies": {
     "ejs": "~0.8.4",

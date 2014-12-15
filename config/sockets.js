@@ -23,7 +23,19 @@ module.exports.sockets = {
   ***************************************************************************/
   onConnect: function(session, socket) {
 
+    //https://github.com/balderdashy/sails/issues/1991
+    //http://stackoverflow.com/questions/25081188/sending-socket-request-from-client-ios-android-to-sails-js-server/25081189#25081189
+
+    //working
+    //http://stackoverflow.com/questions/24837825/sails-js-to-client-using-sails-sockets-join-and-sails-sockets-broadcast-doesnt
+
+    //example
+    //https://github.com/balderdashy/sailsChat
+
     // By default, do nothing.
+    console.log('onConnect');
+    //console.log(session);
+    //console.log(socket);
 
   },
 
@@ -37,6 +49,7 @@ module.exports.sockets = {
   onDisconnect: function(session, socket) {
 
     // By default: do nothing.
+    console.log('onDisconnect');
   },
 
 
@@ -146,7 +159,7 @@ module.exports.sockets = {
   *                                                                          *
   ***************************************************************************/
 
-  // authorization: false,
+  //authorization: false,
 
   /***************************************************************************
   *                                                                          *
@@ -174,7 +187,7 @@ module.exports.sockets = {
   *                                                                          *
   ***************************************************************************/
 
-  // grant3rdPartyCookie: true,
+  //grant3rdPartyCookie: true,
 
   /***************************************************************************
   *                                                                          *

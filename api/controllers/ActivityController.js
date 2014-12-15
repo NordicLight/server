@@ -13,10 +13,20 @@
 
    Activity.native(function(err, collection) {
     collection.distinct('deviceid', function(err, data) {
-      return res.send(data);
+
+      for(var i=0;i<data.length;i++){
+        var  deviceid = data[i];
+
+        Activity.find({deviceid: deviceid}).exec(function(err, data){
+            if(data.length>0){
+              return res.send(data[0]);
+            }
+        });
+
+      }
+
     });
    });
-
  },
  getitems: function (req, res) {
 
