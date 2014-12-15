@@ -48,7 +48,19 @@ module.exports = {
 
 			console.log( 'User subscribed to ' + req.socket.id );
 		}
-	}	
-	
+	},
+	put:function (req,res) {
+
+			//Create ojbect if we do not have it
+  			Chat.create({
+  				user: 'testuser',
+  				message: 'hi'
+				})
+  			.exec(function(err, data) {
+				return res.send(201);
+			});
+
+	}
+
 };
 
