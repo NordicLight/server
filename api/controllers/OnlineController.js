@@ -11,10 +11,10 @@ module.exports = {
 
 		var timeid = req.body.timeid;
 		var timestamp = req.body.timestamp;
-    	var deviceid = req.body.deviceid;
-    	var devicename = req.body.devicename;
-    	var user = req.body.user;
-    	var status = req.body.status;
+    var deviceid = req.body.deviceid;
+    var devicename = req.body.devicename;
+    var user = req.body.user;
+    var status = req.body.status;
 
 		Online.find({deviceid: deviceid})
 		.exec(function(err, data){

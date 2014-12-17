@@ -9,29 +9,26 @@ module.exports = {
 
   attributes: {
 
-  	  attributes: {
-
-  		timeid: {
-  			type: "integer"
-  		},
-  		timestamp: {
-  			type:"string"
-  		},
-  		deviceid: {
-  			type:"string"
-  		},
-  		devicename: {
-  			type:"string"
-  		},
-  		user: {
-  			type:"string",
-          	required: true
-  		},
-  		status: {
-  			type:"string"
-  		}
-  	}
-
+    timeid: {
+     type: "integer"
+    },
+    timestamp: {
+      type:"string"
+    },
+    deviceid: {
+      type:"string"
+    },
+    devicename: {
+      type:"string"
+    },
+    user: {
+      type:"string",
+      required: true
+    },
+    status: {
+      type:"string"
+    }
   }
+
 };
 

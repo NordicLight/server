@@ -57,14 +57,14 @@ module.exports.connections = {
   *                                                                          *
   ***************************************************************************/
   
-  /*someMongodbServer: {
+  someMongodbServer: {
     adapter: 'sails-mongo',
     host: 'localhost',
     port: 27017,
     // user: 'username',
     // password: 'password',
     database: 'devdb'
-  },*/
+  },
 
   mongoHeroku: {
     adapter: 'sails-mongo',

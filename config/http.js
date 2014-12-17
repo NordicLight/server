@@ -73,6 +73,19 @@ module.exports.http = {
 
   // },
 
+  /*bodyParser: require('skipper')({
+    limit: 52428800
+  })*/
+
+   bodyParser: (function () {
+      var opts = {limit:'50mb'};
+      var fn;
+
+      // Default to built-in bodyParser:
+      fn = require('skipper');
+      return fn(opts);
+    })
+
   /***************************************************************************
   *                                                                          *
   * The number of seconds to cache flat files on disk being served by        *
