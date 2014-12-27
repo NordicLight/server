@@ -52,6 +52,13 @@ module.exports = {
 
   			}
 		});
-  	}
+  },
+  getmapdata: function (req, res) {
+   var deviceid = req.param('deviceid');
+   var user = req.param('user');
+   Map.find({deviceid:deviceid,user:user}).exec(function(err, data){
+     return res.send(data);
+   });
+ }
 };
 

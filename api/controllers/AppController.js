@@ -10,8 +10,10 @@
  	getitems: function (req, res) {
 
  		var param = req.param('timeid');
+ 		var deviceid = req.param('deviceid');
+   		var user = req.param('user');
  		param = parseInt(param);
- 		App.find({ timeid: { '>=': param }}).exec(function(err, data){
+ 		App.find({ timeid: { '>=': param },deviceid:deviceid,user:user}).exec(function(err, data){
  			return res.send(data);
  		});
  	}

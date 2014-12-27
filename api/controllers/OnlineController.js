@@ -15,6 +15,7 @@ module.exports = {
     var devicename = req.body.devicename;
     var user = req.body.user;
     var status = req.body.status;
+    var type = req.body.type;
 
 		Online.find({deviceid: deviceid})
 		.exec(function(err, data){
@@ -28,7 +29,8 @@ module.exports = {
   					deviceid: deviceid,
   					devicename: devicename,
   					user: user,
-  					status: status
+  					status: status,
+            type: type
 					})
   				.exec(function(err, data) {
 					return res.send(201);
@@ -43,7 +45,8 @@ module.exports = {
   					deviceid: deviceid,
   					devicename: devicename,
   					user: user,
-  					status: status
+  					status: status,
+            type: type
 					})
   				.exec(function(err, data) {
 					return res.send(201);
@@ -52,12 +55,12 @@ module.exports = {
 
 		});
 	},
-
 	get: function (req, res) {
 
 		var deviceid = req.param('deviceid');
+    var user = req.param('user');
 
-		Online.find({deviceid: deviceid})
+		Online.find({deviceid:deviceid,user:user})
 		.exec(function(err, data){
 			return res.send(data);
 		});

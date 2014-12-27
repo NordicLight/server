@@ -22,6 +22,9 @@ module.exports = {
   		},
       type: {
         type:"string"
+      },
+      logintime: {
+        type: "integer"
       }
   }
   
