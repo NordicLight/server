@@ -17,12 +17,12 @@ module.exports = {
     var status = req.body.status;
     var type = req.body.type;
 
-		Online.find({deviceid: deviceid})
+		Online.find({deviceid:deviceid,user:user})
 		.exec(function(err, data){
 
 			if ( data === null || data === undefined || data.length === 0){
 
-				//Create ojbect if we do not have it
+				  //Create ojbect if we do not have it
   				Online.create({
   					timeid: timeid,
   					timestamp: timestamp,
